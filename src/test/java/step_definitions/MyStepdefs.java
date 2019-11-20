@@ -62,13 +62,13 @@ public class MyStepdefs {
     }
 
 
-    @And("^Click on the green span which contains text \"([^\"]*)\"$")
-    public void clickOnTheGreenSpanWitchContainsText(String textOfElement) {
+    @And("^Click on the green span which contains id \"([^\"]*)\"$")
+    public void clickOnTheGreenSpanWitchContainsText(String idButton) {
         WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath
-                ("//span[text()[contains(.," + textOfElement + ")]]")));
+                ("//button[@id[contains(.," + idButton + ")]]")));
         WebElement greenSpan = driver.findElementByXPath
-                ("//span[text()[contains(.," + textOfElement + ")]]");
+                ("//button[@id[contains(.," + idButton + ")]]");
         greenSpan.click();
     }
 
