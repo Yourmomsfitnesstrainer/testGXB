@@ -1,4 +1,5 @@
 package step_definitions;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
@@ -7,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.util.concurrent.TimeUnit;
 
 
@@ -39,22 +41,18 @@ public class MyStepdefs {
     //Метод клика по кнопке, у которой есть data-qa атрибут.
     @And("^Click on the button which contains data-qa \"([^\"]*)\"$")
     public void clickOnTheButtonWhichContainsDataQa(String dataQa) {
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath
-                ("//*[@data-qa[contains(.," + dataQa + ")]]")));
-        WebElement button = driver.findElementByXPath
-                ("//*[@data-qa[contains(.," + dataQa + ")]]");
+        String locator = "//*[@data-qa[contains(.," + dataQa + ")]]";
+        waiterToBeClickable(locator);
+        WebElement button = driver.findElementByXPath(locator);
         button.click();
     }
 
     // Метод заполнения текстом поля, с явным placeholder.
     @And("^User fill field which contains placeholder \"([^\"]*)\" using text \"([^\"]*)\"$")
     public void userFillFieldWhichContainsPlaceholderUsingText(String placeholder, String text) {
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath
-                ("//input[@placeholder[contains(.," + placeholder + ")]]")));
-        WebElement input = driver.findElementByXPath
-                ("//input[@placeholder[contains(.," + placeholder + ")]]");
+        String locator = "//input[@placeholder[contains(.," + placeholder + ")]]";
+        waiterVisibilityOfElement(locator);
+        WebElement input = driver.findElementByXPath(locator);
         input.sendKeys(text);
     }
 
@@ -67,66 +65,68 @@ public class MyStepdefs {
     // Метод клика по зелёным кнопкам по уникальному id.
     @And("^Click on the green span which contains id \"([^\"]*)\"$")
     public void clickOnTheGreenSpanWitchContainsId(String idButton) {
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath
-                ("//button[@id[contains(.," + idButton + ")]]")));
-        WebElement greenSpan = driver.findElementByXPath
-                ("//button[@id[contains(.," + idButton + ")]]");
+        String locator = "//button[@id[contains(.," + idButton + ")]]";
+        waiterToBeClickable(locator);
+        WebElement greenSpan = driver.findElementByXPath(locator);
         greenSpan.click();
     }
 
     // Метод заполнения текстом поля, с атрибутом data-qa.
     @And("^User fill field which contains data-qa \"([^\"]*)\" using text \"([^\"]*)\"$")
     public void userFillFieldWhichContainsDataQaUsingText(String dataQa, String text) {
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath
-                ("//input[@data-qa[contains(.," + dataQa + ")]]")));
-        WebElement input = driver.findElementByXPath
-                ("//input[@data-qa[contains(.," + dataQa + ")]]");
+        String locator = "//input[@data-qa[contains(.," + dataQa + ")]]";
+        waiterVisibilityOfElement(locator);
+        WebElement input = driver.findElementByXPath(locator);
         input.sendKeys(text);
     }
 
     //Метод только для клика по пользователю из выпадающего списка.
     @And("^Click to add user from the list$")
     public void clickToAddUserFromTheList() {
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath
-                ("//span[@class=\"c-select_options_list__option_label\"]")));
-        WebElement elementWithUserName = driver.findElementByXPath
-                ("//span[@class=\"c-select_options_list__option_label\"]");
+        String locator = "//span[@class=\"c-select_options_list__option_label\"]";
+        waiterVisibilityOfElement(locator);
+        WebElement elementWithUserName = driver.findElementByXPath(locator);
         elementWithUserName.click();
     }
 
     //Метод для клика по кнопке с data-action.
     @And("^Click button which contains data-action \"([^\"]*)\"$")
     public void clickButtonWhichContainsDataAction(String dataAction) {
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath
-                ("//button[@data-action[contains(.," + dataAction + ")]]")));
-        WebElement button = driver.findElementByXPath
-                ("//button[@data-action[contains(.," + dataAction + ")]]");
-        button.click();
+        String locator = "//button[@data-action[contains(.," + dataAction + ")]]";
+        waiterToBeClickable(locator);
+        WebElement buttonElement = driver.findElementByXPath(locator);
+        buttonElement.click();
     }
 
     //Метод для выбора чекбокса.
     @And("^Select checkbox by id \"([^\"]*)\"$")
     public void selectCheckboxById(String idOfInput) {
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath
-                ("//input[@id[contains(.," + idOfInput + ")]]")));
-        WebElement button = driver.findElementByXPath
-                ("//input[@id[contains(.," + idOfInput + ")]]");
-        button.click();
+        String locator = "//input[@id[contains(.," + idOfInput + ")]]";
+        waiterVisibilityOfElement(locator);
+        WebElement buttonElement = driver.findElementByXPath(locator);
+        buttonElement.click();
     }
 
     // Метод для выбора раздела выпадающего меню настроек канала по id.
     @And("^Click on the section channel header settings \"([^\"]*)\"$")
     public void clickOnTheSectionChannelHeaderSettings(String idSectionMenu) {
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath
-                ("//div[text()[contains(., " + idSectionMenu + ")]]/parent::button")));
-        WebElement button = driver.findElementByXPath
-                ("//div[text()[contains(., " + idSectionMenu + ")]]/parent::button");
-        button.click();
+        String locator = "//div[text()[contains(., " + idSectionMenu + ")]]/parent::button";
+        waiterToBeClickable(locator);
+        WebElement buttonElement = driver.findElementByXPath(locator);
+        buttonElement.click();
+    }
+
+    //Метод для ожидания видимости элемента.
+    public void waiterVisibilityOfElement(String SomeLocatorByXpathToBeClickable) {
+        WebDriverWait waitVisibility = new WebDriverWait(driver, 10);
+        waitVisibility.until(ExpectedConditions.elementToBeClickable(By.xpath(SomeLocatorByXpathToBeClickable)));
+
+    }
+
+    //Метод для ожидания кликабельности элемента.
+    public void waiterToBeClickable(String SomeLocatorByXpathToBeClickable) {
+        WebDriverWait waitClickable = new WebDriverWait(driver, 10);
+        waitClickable.until(ExpectedConditions.elementToBeClickable(By.xpath(SomeLocatorByXpathToBeClickable)));
+
     }
 }
