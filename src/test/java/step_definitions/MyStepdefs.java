@@ -117,16 +117,16 @@ public class MyStepdefs {
     }
 
     //Метод для ожидания видимости элемента.
-    public void waiterVisibilityOfElement(String SomeLocatorByXpathToBeClickable) {
+    public void waiterVisibilityOfElement(String SomeLocatorByXpath) {
         WebDriverWait waitVisibility = new WebDriverWait(driver, 10);
-        waitVisibility.until(ExpectedConditions.elementToBeClickable(By.xpath(SomeLocatorByXpathToBeClickable)));
+        waitVisibility.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(SomeLocatorByXpath)));
 
     }
 
     //Метод для ожидания кликабельности элемента.
-    public void waiterToBeClickable(String SomeLocatorByXpathToBeClickable) {
+    public void waiterToBeClickable(String SomeLocatorByXpath) {
         WebDriverWait waitClickable = new WebDriverWait(driver, 10);
-        waitClickable.until(ExpectedConditions.elementToBeClickable(By.xpath(SomeLocatorByXpathToBeClickable)));
+        waitClickable.until(ExpectedConditions.elementToBeClickable(By.xpath(SomeLocatorByXpath)));
 
     }
 }
