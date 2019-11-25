@@ -20,8 +20,8 @@ Feature: Creating a channel and adding a user to it
     And Click on the button which contains data-qa "'invite_to_workspace_submit_button'"
     And Waiting "3" seconds
 
-#  @delChannel
-#  Scenario:
+  @delChannel
+  Scenario: Dell channel
     And Click on the button which contains data-qa "'channel_header_settings_button'"
     And Click on the section channel header settings "'Additional options…'"
     And Click button which contains data-action "'delete'"
