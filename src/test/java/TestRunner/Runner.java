@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features=".\\src\\test\\java\\resources_features\\",
         glue = {"step_definitions"},
-               tags = {"@addChannel, @"},
+               tags = {"@addChannel, @delChannel"},
         dryRun = false,
         strict = false,
         snippets = SnippetType.UNDERSCORE

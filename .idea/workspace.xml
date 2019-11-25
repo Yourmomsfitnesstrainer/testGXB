@@ -31,10 +31,7 @@
       <change afterPath="$PROJECT_DIR$/../automation-rest-sample/src/main/java/SampleTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../automation-rest-sample/src/main/java/models/User.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pogodaInYO/src/main/java/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestRunner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRunner/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources_features/addChannel.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources_features/addChannel.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestRunner/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestRunner/Runner.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,10 +46,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/resources_features/addChannel.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="391">
               <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
             </state>
           </provider>
@@ -83,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestRunner/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="136">
+              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -114,9 +111,9 @@
         <option value="$PROJECT_DIR$/src/test/java/resources_features/deleteChannel.feature" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/Readme.md" />
-        <option value="$PROJECT_DIR$/src/test/java/TestRunner/Runner.java" />
         <option value="$PROJECT_DIR$/src/test/java/step_definitions/MyStepdefs.java" />
         <option value="$PROJECT_DIR$/src/test/java/resources_features/addChannel.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/TestRunner/Runner.java" />
       </list>
     </option>
   </component>
@@ -272,7 +269,7 @@
       <workItem from="1574419793159" duration="674000" />
       <workItem from="1574424187346" duration="2801000" />
       <workItem from="1574538599114" duration="981000" />
-      <workItem from="1574667622621" duration="274000" />
+      <workItem from="1574667622621" duration="384000" />
     </task>
     <servers />
   </component>
@@ -309,7 +306,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33859000" />
+    <option name="totallyTimeSpent" value="33969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -324,7 +321,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5013774" side_tool="true" weight="0.24939272" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962963" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.71481484" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.71481484" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3962963" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -332,7 +329,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.31851852" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31851852" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -473,13 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestRunner/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/step_definitions/MyStepdefs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -493,8 +483,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/resources_features/addChannel.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="391">
           <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestRunner/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
         </state>
       </provider>
     </entry>
